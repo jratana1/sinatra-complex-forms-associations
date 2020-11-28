@@ -39,7 +39,7 @@ class PetsController < ApplicationController
       @owner = Owner.create(params["owner"])    
       @pet.update(name: params["pet_name"], owner_id: @owner.id)
     else
-      binding.pry
+      
       @pet.update(name: params["pet_name"], owner_id: params[:owner_id])
     end
 
